@@ -22,4 +22,6 @@ class CharacterAddedEventSequentialTransformer extends CharacterEvent {
 }
 
 @immutable
-class CharactersResetEvent extends CharacterEvent {}
+class CharactersResetEvent extends CharacterEvent {
+  const CharactersResetEvent();
+}

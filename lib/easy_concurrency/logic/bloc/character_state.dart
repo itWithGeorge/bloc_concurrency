@@ -20,7 +20,7 @@ class CharacterInitialState extends CharacterState {
   }
 
   @override
-  int get hashCode => Object.hashAll([currentCharacter]);
+  int get hashCode => currentCharacter.hashCode;
 }
 
 @immutable

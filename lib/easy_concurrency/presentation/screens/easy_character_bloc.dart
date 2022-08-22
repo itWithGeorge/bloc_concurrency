@@ -29,7 +29,7 @@ class _EasyCharacterBlocScreenState extends State<EasyCharacterBlocScreen> {
           } else if (state is CharecterReceivedState) {
             return Text(state.currentCharacter.character);
           }
-          return const CircularProgressIndicator();
+          return const Text('NOGO for sure!');
         }),
       ),
     );

@@ -1,5 +1,4 @@
 import 'dart:math' show Random;
-import 'dart:ui';
 
 import 'package:bloc/bloc.dart';
 import 'package:bloc_concurrency/bloc_concurrency.dart';
@@ -19,8 +18,7 @@ class CharacterBloc extends Bloc<CharacterEvent, CharacterState> {
         transformer: sequential());
   }
 
-  void _onCharactersResetEvent(
-      CharactersResetEvent resetEvent, Emitter<CharacterState> emitter) {
+  void _onCharactersResetEvent(_, Emitter<CharacterState> emitter) {
     emitter(CharacterInitialState());
   }
 
