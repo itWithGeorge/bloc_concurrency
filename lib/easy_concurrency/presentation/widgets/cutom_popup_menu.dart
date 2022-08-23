@@ -5,7 +5,7 @@ import 'package:skawa_bloc_test/easy_concurrency/logic/bloc/character_bloc.dart'
 
 enum CustomPopUpMenuItems {
   resetState,
-  noTransfromer,
+  noTransformer,
   sequential,
 }
 
@@ -23,7 +23,7 @@ class CustomPopupMenu extends StatelessWidget {
           child: Text('reset state'),
         ),
         const PopupMenuItem(
-          value: CustomPopUpMenuItems.noTransfromer,
+          value: CustomPopUpMenuItems.noTransformer,
           child: Text('No transformer'),
         ),
         const PopupMenuItem(
@@ -36,7 +36,7 @@ class CustomPopupMenu extends StatelessWidget {
           case CustomPopUpMenuItems.resetState:
             context.read<CharacterBloc>().add(const CharactersResetEvent());
             break;
-          case CustomPopUpMenuItems.noTransfromer:
+          case CustomPopUpMenuItems.noTransformer:
             AddEventService.instance().addEvent(
                 bloc: context.read<CharacterBloc>(), isSequential: false);
             /* var _messageList = message.split('');

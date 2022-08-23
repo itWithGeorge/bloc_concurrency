@@ -41,4 +41,7 @@ class CharacterBloc extends Bloc<CharacterEvent, CharacterState> {
     await Future.delayed(Duration(seconds: Random().nextBool() ? 0 : 2),
         () => emitter(CharecterReceivedState(characterReceived: _appended)));
   }
+
+  @override
+  String toString() => 'CharacterBloc ${state.currentCharacter.character}';
 }

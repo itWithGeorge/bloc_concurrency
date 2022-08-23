@@ -21,6 +21,9 @@ class CharacterInitialState extends CharacterState {
 
   @override
   int get hashCode => currentCharacter.hashCode;
+
+  @override
+  String toString() => 'CharacterInitialState';
 }
 
 @immutable
@@ -41,4 +44,7 @@ class CharecterReceivedState extends CharacterState {
 
   @override
   int get hashCode => characterReceived.hashCode;
+
+  @override
+  String toString() => 'CharecterReceivedState $characterReceived';
 }
