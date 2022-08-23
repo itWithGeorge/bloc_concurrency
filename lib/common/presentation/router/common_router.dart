@@ -11,6 +11,7 @@ class CommonRouter {
         return MaterialPageRoute(builder: (_) => const HomeScreen());
 
       case '/easyConcurrency':
+        // CharacterBloc is scoped - WillPopScope should handle carefully!
         return MaterialPageRoute(
             builder: (_) => BlocProvider<CharacterBloc>(
                   create: (context) => CharacterBloc(),
