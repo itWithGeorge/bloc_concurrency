@@ -10,6 +10,12 @@ class CharCubit extends Cubit<CharState> {
       Future.delayed(Duration(seconds: delay), () => char);
 
   void addFutureChars() async {
+    // for clean UI state when this function called multiple times
+    // some ugly solution here...
+    if (state is! CharInitial) {
+      return;
+    }
+
     for (var i = 0; i < message.length; i++) {
       if (message[i] == 'w') {
         emit(CharState(
