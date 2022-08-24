@@ -1,7 +1,5 @@
-import 'package:skawa_bloc_test/easy_concurrency/data/model/character.dart';
-import 'package:skawa_bloc_test/easy_concurrency/logic/bloc/character_bloc.dart';
-
-const message = 'Skawa_Innovation_Ltd.';
+import 'package:skawa_bloc_test/common/data/model/character.dart';
+import 'package:skawa_bloc_test/bloc_concurrency/logic/bloc/character_bloc.dart';
 
 class AddEventService {
   AddEventService._();

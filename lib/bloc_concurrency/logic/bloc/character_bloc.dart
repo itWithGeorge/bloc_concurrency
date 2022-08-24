@@ -1,10 +1,8 @@
-import 'dart:math' show Random;
-
 import 'package:bloc/bloc.dart';
 import 'package:bloc_concurrency/bloc_concurrency.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart' show immutable;
-import 'package:skawa_bloc_test/easy_concurrency/data/model/character.dart';
+import 'package:skawa_bloc_test/common/data/model/character.dart';
 
 part 'character_event.dart';
 part 'character_state.dart';
@@ -28,7 +26,8 @@ class CharacterBloc extends Bloc<CharacterEvent, CharacterState> {
     final String _current = state.currentCharacter.character;
     final String _received = event.character.character;
     var _appended = _current + _received;
-    await Future.delayed(Duration(seconds: Random().nextBool() ? 0 : 2),
+    await Future.delayed(
+        Duration(seconds: _received == 'w' ? message.length : 0),
         () => emitter(CharecterReceivedState(characterReceived: _appended)));
   }
 
@@ -38,7 +37,8 @@ class CharacterBloc extends Bloc<CharacterEvent, CharacterState> {
     final String _current = state.currentCharacter.character;
     final String _received = event.character.character;
     var _appended = _current + _received;
-    await Future.delayed(Duration(seconds: Random().nextBool() ? 0 : 2),
+    await Future.delayed(
+        Duration(seconds: _received == 'w' ? message.length : 0),
         () => emitter(CharecterReceivedState(characterReceived: _appended)));
   }
 

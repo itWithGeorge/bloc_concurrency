@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:skawa_bloc_test/easy_concurrency/data/service/add_event_service.dart';
-import 'package:skawa_bloc_test/easy_concurrency/logic/bloc/character_bloc.dart';
-import 'package:skawa_bloc_test/easy_concurrency/presentation/widgets/cutom_popup_menu.dart';
+import 'package:skawa_bloc_test/bloc_concurrency/data/service/add_event_service.dart';
+import 'package:skawa_bloc_test/bloc_concurrency/logic/bloc/character_bloc.dart';
+import 'package:skawa_bloc_test/bloc_concurrency/presentation/widgets/cutom_popup_menu.dart';
 
 class EasyCharacterBlocScreen extends StatefulWidget {
   const EasyCharacterBlocScreen({Key? key}) : super(key: key);
@@ -39,7 +39,7 @@ class _EasyCharacterBlocScreenState extends State<EasyCharacterBlocScreen> {
       onWillPop: _onWillPop,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Easy Character screen'),
+          title: const Text('Bloc concurrency'),
           actions: const [
             CustomPopupMenu(),
           ],

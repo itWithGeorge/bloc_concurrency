@@ -15,7 +15,7 @@ class HomeScreen extends StatelessWidget {
             TextButton(
                 onPressed: () =>
                     Navigator.of(context).pushNamed('/easyConcurrency'),
-                child: const Text('Easy concurrency')),
+                child: const Text('Bloc concurrency')),
             TextButton(onPressed: () => {}, child: const Text('Next screen')),
           ],
         ),

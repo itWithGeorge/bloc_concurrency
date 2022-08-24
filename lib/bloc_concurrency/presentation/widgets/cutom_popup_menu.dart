@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:skawa_bloc_test/easy_concurrency/data/service/add_event_service.dart';
-import 'package:skawa_bloc_test/easy_concurrency/logic/bloc/character_bloc.dart';
+import 'package:skawa_bloc_test/bloc_concurrency/data/service/add_event_service.dart';
+import 'package:skawa_bloc_test/bloc_concurrency/logic/bloc/character_bloc.dart';
 
 enum CustomPopUpMenuItems {
   resetState,
